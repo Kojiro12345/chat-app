@@ -1,0 +1,9 @@
+<h1>ユーザー一覧</h1>
+
+<% @users.each do |u| %>
+  <ul>
+    <li>
+      <%= u.email %>
+    </li>
+  </ul>
+<% end %>
