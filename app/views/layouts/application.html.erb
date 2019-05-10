@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <nav>
+      <%= current_user.email + "さんとしてログイン中" if user_signed_in? %>
+      <%= link_to 'アカウント作成', new_user_registration_path, class: "btn btn-pink"  %>
+      <%= link_to 'ログイン', new_user_session_path, class: "btn btn-pink" %>
+      <%= link_to 'サインアウト', destroy_user_session_path, method: 'DELETE', class: "btn btn-white" %>
+    </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

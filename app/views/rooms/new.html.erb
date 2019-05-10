@@ -1,0 +1,7 @@
+<%= form_with model: @room do |f| %>
+  <%= f.label "相手のemail" %>
+  <%= f.text_field :email %>
+  <%= f.submit "作成" %>
+<% end %>
+
+<%= @test %>

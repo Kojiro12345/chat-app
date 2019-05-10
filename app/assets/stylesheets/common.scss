@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 4rem;
+  border-bottom: 1px solid #ffb6c1;
+}
+
+a.btn {
+  text-decoration: none;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 8px;
+  padding: 0 1rem;
+  margin: 0 0.5rem;
+  
+  &-pink {
+    background: #ffb6c1;
+    color: white;
+    border: 1px solid #ffb6c1;
+  }
+  
+  &-white {
+    background: color;
+    color: black;
+    border: 1px solid black;
+  }
+}

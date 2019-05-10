@@ -1,0 +1,16 @@
+<%= @room.name %>さんとのチャット
+
+<div>
+  <% unless @room.messages.count == 0 %>
+    <% @room.messages.each do |m| %>
+      <p><%= m.speaker_id %> : <%= m.body %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+  <%= form_with model: @message, url: messages_path(room_id: @room.id) do |f| %>
+    <%= f.text_area :body %>
+    <%= f.submit '送信' %>
+  <% end %>
+</div>

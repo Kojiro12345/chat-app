@@ -1,0 +1,11 @@
+<h1>あなたの参加しているメッセージ一覧</h1>
+<%= link_to '新しくメッセージを始める', new_room_path %>
+<% @rooms.each do |r| %>
+  <ul>
+    <li>
+      <%= link_to room_path(r) do %>
+        <%= r.name %>さんとのチャット
+      <% end %>
+    </li>
+  </ul>
+<% end %>
